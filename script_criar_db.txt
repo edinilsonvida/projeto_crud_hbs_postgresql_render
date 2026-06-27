@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS usuario;
+
+CREATE TABLE usuario (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  curso VARCHAR(100) NOT NULL,
+  periodo VARCHAR(30) NOT NULL,
+  ativo BOOLEAN DEFAULT TRUE,
+  receber_noticias BOOLEAN DEFAULT FALSE,
+  tecnologias VARCHAR(255)
+);
+
+INSERT INTO usuario
+(nome, email, curso, periodo, ativo, receber_noticias, tecnologias)
+VALUES
+('Maria Silva', 'maria@email.com', 'Técnico em Informática', 'Matutino', TRUE, TRUE, 'HTML, CSS'),
+('João Souza', 'joao@email.com', 'Desenvolvimento de Sistemas', 'Noturno', TRUE, FALSE, 'JavaScript, Node.js');
